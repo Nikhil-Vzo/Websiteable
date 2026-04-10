@@ -23,7 +23,6 @@ function Footer() {
             </p>
             <button className="subscribe-btn">Subscribe</button>
             
-            {/* Decorative semi-circle right */}
             <div className="deco-purple-shape-footer" aria-hidden="true"></div>
           </div>
         </div>

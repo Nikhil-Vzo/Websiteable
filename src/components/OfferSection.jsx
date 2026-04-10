@@ -58,7 +58,6 @@ function OfferSection() {
         ease: 'power3.out'
       }, '-=0.5');
 
-    // Spin badge sticker magnetically on scroll
     gsap.to('.sticker-img', {
       rotation: 180,
       ease: 'none',

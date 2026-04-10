@@ -16,13 +16,11 @@ function SectionTomorrow() {
       }
     });
 
-    // Content staggering with mask reveal
     tl.fromTo('.tomorrow-content h2, .tomorrow-content p, .tomorrow-content .read-more', 
       { y: 50, opacity: 0, clipPath: 'polygon(0 100%, 100% 100%, 100% 100%, 0 100%)' },
       { y: 0, opacity: 1, clipPath: 'polygon(0 0%, 100% 0%, 100% 100%, 0 100%)', duration: 1, stagger: 0.15, ease: 'power3.out' }
     );
 
-    // Image reveal
     tl.from('.image-circle-wrapper', {
       scale: 0.8,
       opacity: 0,
@@ -30,7 +28,6 @@ function SectionTomorrow() {
       ease: 'power3.out'
     }, '-=0.8');
 
-    // Square pop
     tl.from('.red-square', {
       scale: 0,
       rotation: 45,
@@ -38,7 +35,6 @@ function SectionTomorrow() {
       ease: 'back.out(1.7)'
     }, '-=0.5');
 
-    // Smooth image scrubbing parallax
     gsap.to('.image-circle-wrapper img', {
       y: 40,
       ease: 'none',
@@ -78,7 +74,6 @@ function SectionTomorrow() {
         <div className="red-square" aria-hidden="true"></div>
       </div>
       
-      {/* Decorative string vector */}
       <div className="red-connecting-string" aria-hidden="true">
         <svg width="600" height="400" viewBox="0 0 600 400" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M500 0C500 100 600 100 600 200C600 300 400 300 300 200C200 100 100 250 0 250" stroke="var(--coral-red)" strokeWidth="3" strokeLinecap="round"/>

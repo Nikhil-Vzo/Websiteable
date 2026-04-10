@@ -7,7 +7,6 @@ function TestimonialSection() {
   const container = useRef();
 
   useGSAP(() => {
-    // Reveal text in header
     gsap.fromTo('.testimonial-header h2',
       { y: 40, opacity: 0, clipPath: 'polygon(0 100%, 100% 100%, 100% 100%, 0 100%)' },
       {
@@ -24,7 +23,6 @@ function TestimonialSection() {
       }
     );
 
-    // Reveal Quote Box
     gsap.from('.quote-box', {
       scale: 0.9,
       opacity: 0,
@@ -38,7 +36,6 @@ function TestimonialSection() {
       }
     });
 
-    // Avatars pop in like bubbles
     gsap.from('.t-avatar', {
       scale: 0,
       opacity: 0,
@@ -55,10 +52,8 @@ function TestimonialSection() {
       }
     });
 
-    // Make them parallax slowly as you scroll
     const avatars = gsap.utils.toArray('.t-avatar');
     avatars.forEach((avatar, i) => {
-      // Create random speeds & directions
       const speed = (i % 2 === 0 ? 1 : -1) * (Math.random() * 40 + 20);
       
       gsap.to(avatar, {
@@ -98,7 +93,6 @@ function TestimonialSection() {
           <span className="quote-mark right">”</span>
         </div>
         
-        {/* Floating Avatars */}
         <div className="test-avatars" aria-hidden="true">
           <img src="https://i.pravatar.cc/150?img=33" alt="Customer" className="t-avatar t1" />
           <img src="https://i.pravatar.cc/150?img=32" alt="Customer" className="t-avatar t2" />

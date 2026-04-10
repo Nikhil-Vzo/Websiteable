@@ -11,12 +11,10 @@ import OfferSection from './components/OfferSection';
 import TestimonialSection from './components/TestimonialSection';
 import Footer from './components/Footer';
 
-// Register global plugins exclusively once
 gsap.registerPlugin(ScrollTrigger);
 
 function App() {
   useEffect(() => {
-    // Initialize standard Lenis configuration for buttery scrolling
     const lenis = new Lenis({
       duration: 1.2,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), 
@@ -24,10 +22,8 @@ function App() {
       smoothTouch: false,
     });
 
-    // Tie ScrollTrigger tracking into the Lenis loop seamlessly
     lenis.on('scroll', ScrollTrigger.update);
 
-    // Provide GSAP ticker access to the RAF native engine
     gsap.ticker.add((time) => {
       lenis.raf(time * 1000);
     });
