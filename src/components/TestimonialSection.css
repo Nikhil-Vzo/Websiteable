@@ -1,0 +1,121 @@
+.testimonial-section {
+  padding: 6rem 20px;
+  text-align: center;
+  position: relative;
+}
+
+.testimonial-header h2 {
+  display: inline-block;
+  position: relative;
+  margin-bottom: 4rem;
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+}
+
+.highlight-orange-double {
+  position: relative;
+  display: inline-block;
+}
+
+.highlight-orange-double::after {
+  content: '';
+  position: absolute;
+  bottom: 0px;
+  left: -5%;
+  width: 110%;
+  height: 4px;
+  background-color: var(--highlight-orange);
+  border-radius: 4px;
+  transform: rotate(-1deg);
+  box-shadow: 0 8px 0 var(--highlight-orange);
+}
+
+.testimonial-content {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.quote-box {
+  background-color: var(--highlight-green);
+  padding: 4rem;
+  border-radius: 40px;
+  position: relative;
+  z-index: 10;
+}
+
+.quote-box p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--primary-text);
+  font-weight: 400;
+}
+
+.quote-mark {
+  font-size: 8rem;
+  color: #ccc;
+  position: absolute;
+  line-height: 1;
+  font-family: serif;
+  opacity: 0.5;
+}
+
+.quote-mark.left {
+  top: 10px;
+  left: 20px;
+}
+
+.quote-mark.right {
+  bottom: -40px;
+  right: 20px;
+}
+
+/* Floating avatars */
+.test-avatars {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.t-avatar {
+  position: absolute;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid white;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+/* Positioning exactly matching the reference visually using strict px offsets */
+/* Left side */
+.t1 { width: 90px; height: 90px; top: -140px; left: -200px; }
+.t2 { width: 50px; height: 50px; top: 50px; left: -320px; }
+.t3 { width: 140px; height: 140px; top: 120px; left: -140px; border-width: 6px; }
+.t4 { width: 80px; height: 80px; bottom: -20px; left: -260px; }
+
+/* Right side */
+.t5 { width: 110px; height: 110px; top: -180px; right: -180px; border-width: 6px; }
+.t6 { width: 60px; height: 60px; top: -40px; right: -40px; }
+.t7 { width: 80px; height: 80px; top: 100px; right: -100px; }
+.t8 { width: 220px; height: 220px; bottom: -80px; right: -300px; border-width: 8px; }
+
+@media (max-width: 1300px) {
+  .test-avatars {
+    transform: scale(0.8);
+  }
+}
+
+@media (max-width: 900px) {
+  .test-avatars {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  .quote-box {
+    padding: 2rem;
+  }
+}

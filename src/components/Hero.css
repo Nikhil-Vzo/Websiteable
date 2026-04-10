@@ -1,0 +1,165 @@
+.hero-section {
+  position: relative;
+  text-align: center;
+  padding: 6rem 0 2rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 10;
+  max-width: 900px;
+  margin-bottom: 2rem;
+}
+
+.hero-content h1 {
+  font-size: clamp(3rem, 6.5vw, 5.5rem);
+  margin-bottom: 2rem;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+}
+
+.highlight-orange {
+  position: relative;
+  display: inline-block;
+}
+
+/* Updated scribble style for highlight-orange */
+.highlight-orange::after {
+  content: '';
+  position: absolute;
+  bottom: 0px;
+  left: -5%;
+  width: 110%;
+  height: 6px;
+  background-color: var(--highlight-orange);
+  z-index: -1;
+  border-radius: 6px;
+  transform: rotate(-1deg);
+}
+
+.highlight-pink {
+  background-color: #ffd6f5;
+  border-radius: 40px;
+  padding: 0 20px;
+  display: inline-block;
+}
+
+.highlight-green {
+  background-color: var(--highlight-green);
+  border-radius: 40px;
+  padding: 0 20px;
+  display: inline-block;
+}
+
+.hero-subtitle {
+  max-width: 650px;
+  margin: 0 auto;
+  font-size: clamp(0.9rem, 1.2vw, 1.05rem);
+  font-weight: 400;
+}
+
+/* Decoratives */
+.deco-purple-shape {
+  position: absolute;
+  top: 15%;
+  right: 5%;
+  width: 60px;
+  height: 120px;
+  background-color: var(--highlight-purple);
+  border-top-right-radius: 120px;
+  border-bottom-right-radius: 120px;
+  transform: rotate(-30deg);
+  opacity: 0.8;
+}
+
+.deco-wavy-lines {
+  position: absolute;
+  top: 40%;
+  left: -150px;
+  z-index: 0;
+  width: 100px;
+  height: 100px;
+  
+}
+
+.vector-2510-img,
+.vector-2511-img {
+  position: absolute;
+  height: 150px; 
+  width: auto;
+  object-fit: contain;
+}
+
+.vector-2510-img {
+  top: 25px; /* Nudged down */
+  left: 30px; /* Nudged right */
+  z-index: 1; /* Red overlaps black */
+}
+
+.vector-2511-img {
+  top: -10px; /* Originates higher */
+  left: -10px; /* Originates further left */
+  opacity: 0.9;
+  z-index: -1; /* Black sits behind red */
+}
+
+/* Avatars below the text */
+.avatars-container {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  margin-top: 1rem;
+  z-index: 5;
+}
+
+.avatar {
+  position: absolute;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid white;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.avatar:hover {
+  transform: scale(1.05);
+}
+
+/* Positioning based on the image exactly */
+.a1 { width: 200px; height: 200px; bottom: 10px; left: -6%; z-index: 2; }
+.a2 { width: 200px; height: 200px; bottom: 100px; left: 6%; z-index: 1;}
+.a3 { width: 200px; height: 200px; top: 0px; left: 32%; }
+.a4 { width: 200px; height: 200px; bottom: 20px; left: 45%; }
+.a5 { width: 200px; height: 200px; top: 40px; right: 18%; }
+.a6 { width: 200px; height: 200px; bottom: 50px; right: 8%; z-index: 1; }
+.a7 { width: 200px; height: 200px; bottom: 100px; right: -10%; z-index: 2; }
+
+/* Additional Decoratives */
+.deco-circle {
+  position: absolute;
+  bottom: 25%;
+  right: 15%;
+  z-index: 1;
+  opacity: 0.7;
+}
+
+@media (max-width: 768px) {
+  .avatars-container {
+    height: 300px;
+    transform: scale(0.8);
+  }
+  .deco-purple-shape, .deco-wavy-lines {
+    display: none;
+  }
+}
+@media (max-width: 500px) {
+  .avatars-container {
+    height: 150px;
+    transform: scale(0.4);
+    margin-top: -50px;
+  }
+}
